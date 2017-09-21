@@ -1,0 +1,12 @@
+<div class="search-bar ta-c">
+	<button ng-click="name='';search();">cancel</button>
+	<input type="text" ng-model="name" placeholder="search company/position/city">
+	<button class="ta-l" ng-click="search()">
+		<img class="d-ib va-c ta-c" src="image/search.png" alt="">
+	search
+	</button>
+</div>
+<div app-tab list="tabList" tab-click='tClick(id,name)'></div>
+<div class="search-list" app-position-list data="list"></div>
+<div app-foot></div>
+<div app-sheet list="sheet.list" is-visible='sheet.visible' select="sClick(id,name)"></div>

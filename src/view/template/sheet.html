@@ -1,0 +1,8 @@
+<div class="sheet" ng-show="!!isVisible" ng-click='isVisible=false'>
+	<div class="wrapper">
+		<ul>
+			<li ng-click="select(item)" ng-repeat="item in list" class="d-b ta-c" ng-bind="item.name"></li>
+		</ul>
+		<button class="d-b" ng-click='isVisible=false'>cancel</button>
+	</div>
+</div>
