@@ -1,0 +1,15 @@
+how to copy local repo to remote repo
+
+1. create a repo in github.com . eg. name :testWeb
+2.there is a local repo 
+3.git init to create local git and git remote add origin git@github.com:Jeffrey-zhao/testWeb.git
+4.git add . -->git commit -m 'git init'
+5.if your remote is empty ,means no files that the same name files with local reop.
+6.if yes .just git pull -f or git fetch and git merge
+  if no ,ok that will be smoothly.
+7.git push
+
+8.if you create new local branch :jeff1, when you in jeff1 ,git merge origin master 
+9.git push -set-upstream origin jeff1
+	that means you will create new branch in remote end 
+	then you can push request in remote end.
