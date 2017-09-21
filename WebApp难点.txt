@@ -1,0 +1,4 @@
+1.promise
+2.ui-router and angular:router ==>params
+3.http.get/post or ajax
+4.

@@ -1,0 +1,9 @@
+<div app-head-bar="" text="'职位详情'"></div>
+<div app-position-info="" is-Active='isActive' is-login='isLogin' pos='position'></div>
+<div app-company-info="" com="company"></div>
+<div class="position-desc bg-w">
+    <h4>职位描述</h4>
+    <pre class="ta-l" ng-bind="position.description">
+	</pre>
+</div>
+<button type="button" class="bottom-btn c-w" ng-bind="isLogin?'投个简历':'去登陆'"></button>
