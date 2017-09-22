@@ -10,6 +10,7 @@ angular.module('app')
                 });
         };
         $scope.search();
+        $scope.filterObj={};
         $scope.sheet = {};
         $scope.tabList = [{
                 id: 'city',
@@ -23,12 +24,42 @@ angular.module('app')
                 name: 'scale'
             }
         ];
-
+        var tabId = '';
         $scope.tClick = function(id, name) {
-        	$scope.sheet.list=dict[id];
-        	$scope.sheet.visible=true;
+            tabId = id;
+            $scope.sheet.list = dict[id];
+            $scope.sheet.visible = true;
         };
-        $scope.sClick=function(id,name){
-        	console.log(id,name);
-        }
+        $scope.sClick = function(id, name) {
+            if (id) {
+                angular.forEach($scope.tabList, function(item) {
+                    console.log(item,id,name);
+                    if (item.id == tabId) {
+                        item.name = name;
+                    }
+                });
+                $scope.filterObj[tabId+"Id"]=id;
+
+                console.log($scope.filterObj[tabId+"Id"],id);
+            } else {
+                delete $scope.filterObj[tabId+"Id"];
+                angular.forEach($scope.tabList, function(item) {
+                    if (item.id == tabId) {
+                        switch (item.id) {
+                            case 'city':
+                                item.name = "city";
+                                break;
+                            case 'salary':
+                                item.name = "salary";
+                                break;
+                            case 'scale':
+                                item.name = "scale";
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                })
+            }
+        };
     }]);
