@@ -1,7 +1,10 @@
 'use strict';
 
 angular.module('app')
-    .controller('positionCtrl', ['$scope', '$state', '$http', '$q', function($scope, $state, $http, $q) {
+    .controller('positionCtrl', ['$scope', '$state', '$http', '$q','cache2', 
+        function($scope, $state, $http, $q,cache2) {
+        //cache2.put('zhao','cache2');
+
         $scope.isLogin = false;
 
         function getPosition() {

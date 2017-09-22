@@ -1,0 +1,38 @@
+@import 'index.less';
+
+.search-bar {
+    background-color: @headBgColor;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    .h(40);
+    .lh(40);
+    input {
+        .pl(10);
+        border-radius: 20px;
+        border-style: none;
+        background-color: @bodyBgColor;
+        outline-width: 0;
+        .h(25);
+        .w(190);
+        box-sizing: border-box;
+    }
+    img {
+        transform: scale(0.6);
+    }
+    button {
+        border: 0;
+        background-color: @headBgColor;
+        &:first-child {
+            color: @defaultColor;
+        }
+        &:last-child {
+            color: @muteColor;
+        }
+    }
+}
+
+.search-list{
+    margin-top:80px;
+}
