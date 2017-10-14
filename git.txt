@@ -1,4 +1,4 @@
-how to copy local repo to remote repo
+1) how to copy local repo to remote repo
 
 1. create a repo in github.com . eg. name :testWeb
 2.there is a local repo 
@@ -13,3 +13,13 @@ how to copy local repo to remote repo
 9.git push -set-upstream origin jeff1
 	that means you will create new branch in remote end 
 	then you can push request in remote end.
+
+
+2) git abandon local code force update 
+git fetch --all
+git reset --hard origin/master
+
+3) about git sample flow
+http://blog.jobbole.com/53573/
+
+4)test git in sublime #could remove this line.

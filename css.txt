@@ -1,0 +1,19 @@
+1.calc()
+when you set div width:percent eg.100% and you also want to set margin-right ,then you will fail
+so you could be succesful like it below
+
+html:
+<body>
+	<div class="parent">
+		<div class="child">
+
+		</div>
+	</div>
+</body> 
+
+style/css:
+
+.child{
+	margin-right:10px;
+	width:calc(100% - 10px); /*note that dont write like it width:calc(100%-10px) space is important*/
+}

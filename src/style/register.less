@@ -1,0 +1,104 @@
+@import './index.less';
+.register {
+    background-image: url(../image/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    .form {
+        .mt(200);
+        .form-line {
+            margin: 0 auto 0 auto;
+            .w(300);
+            .h(40);
+            .lh(40);
+            border-width: 0;
+            background: @formBgColor;
+            color: @defaultColor;
+            outline-width: 0;
+            font-size: 0;
+            box-sizing: content-box;
+            input {
+                box-sizing: border-box;
+                position: fixed;
+                top: center;
+                left: center;
+                font-size: 14px;
+                .h(40);
+                .lh(40);
+                width: 245px;
+                text-indent: 5px;
+                border-width: 0;
+                background: @formBgColor;
+                color: @defaultColor;
+                outline-width: 0;
+                &::-webkit-input-placeholder {
+                    color: @defaultColor;
+                }
+            }
+            .account {
+                background-image: url(../image/account.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-color: @iconBgColor;
+                .h(40);
+                .w(55);
+            }
+            .lock {
+                background-image: url(../image/lock.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-color: @iconBgColor;
+                .w(55);
+                .h(40);
+            }
+            &:first-child {
+                border-bottom: 1px solid @defaultColor;
+            }
+        }
+        .valid {
+            margin-top: 30px;
+            .valid-input {
+                padding: 0;
+                .w(200);
+                .h(40);
+                font-size: 14px;
+                border-width: 0;
+                background: @formBgColor;
+                color: @defaultColor;
+                outline-width: 0;
+                border-width: 0;
+                &::-webkit-input-placeholder {
+                    color: @defaultColor;
+                }
+            }
+            .valid-btn {
+                .w(80);
+                .h(40);
+                border-width: 0;
+                background-color: @headBgColor;
+                color: @defaultColor;
+            }
+        }
+        button {
+            .w(300);
+            .h(40);
+            font-size: 18px;
+            font-weight: bold;
+            border: 1px solid @headBgColor;
+            &.login-btn {
+                .mt(60);
+                background-color: @headBgColor;
+                color: @defaultColor;
+            }
+            &.register-btn {
+                .mt(20);
+                background-color: @btnBgColor;
+                color: @headBgColor;
+            }
+        }
+    }
+}

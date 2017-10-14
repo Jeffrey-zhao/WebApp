@@ -7,7 +7,8 @@ angular.module('app')
 		replace:true,
 		templateUrl:"view/template/positionList.html",
 		scope:{
-			data:'='
+			data:'=',
+			filterObj:'='
 		}
 	}
 }])
