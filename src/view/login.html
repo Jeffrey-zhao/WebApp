@@ -1,14 +1,14 @@
 <div class="login">
-    <form class="form ta-c">
-        <div class="form-line ta-l">
+    <form class="form ta-c" name='form'>
+        <div class="form-line ta-l p-r">
             <span class="account d-ib ta-c"></span>
-            <input class="d-ib" type="text" placeholder="input phone">
+            <input validator='required,phone'  name='phone' ng-model='user.phone' class="d-ib" type="text" placeholder="input phone">
         </div>
-        <div class="form-line ta-l">
+        <div class="form-line ta-l p-r">
             <span class="lock d-ib ta-c"></span>
-            <input class="d-ib" type="text" placeholder="input password">
+            <input validator='required,password' name='password' ng-model='user.password' class="d-ib" type="password" placeholder="input password">
         </div>
-        <button class="login-btn">login</button>
-        <button class="register-btn">register</button>
+        <button class="login-btn" validation-submit='form' ng-click='submit()'>login</button>
+        <button class="register-btn" ui-sref='register'>register</button>
     </form>
 </div>

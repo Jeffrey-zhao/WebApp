@@ -10,6 +10,20 @@
     bottom: 0;
     .form {
         .mt(260);
+        .ng-invalid {
+                    +span {
+                        position:absolute;
+                        color: @dangerColor;
+                        right:5px;
+                        font-size: 12px;
+                        text-align: right;
+                        height:40px;
+                        line-height:40px; 
+                        p{
+                            margin-top:0;
+                        }
+                    }
+                }
         .form-line {
             margin: 0 auto 0 auto;
             .w(300);

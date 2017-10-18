@@ -1,18 +1,18 @@
 <div class="register">
-    <form class="form ta-c">
-        <div class="form-line ta-l">
+    <form class="form ta-c" name='form'>
+        <div class="form-line ta-l p-r">
             <span class="account d-ib ta-c"></span>
-            <input class="d-ib" type="text" placeholder="input phone">
+            <input  name='phone' ng-model='user.phone' validator='required,phone' class="d-ib" type="text" placeholder="input phone">
         </div>
-        <div class="form-line ta-l">
+        <div class="form-line ta-l p-r">
             <span class="lock d-ib ta-c"></span>
-            <input class="d-ib" type="text" placeholder="input password">
+            <input name='password' ng-model='user.password'  validator='required,password' class="d-ib" type="password" placeholder="input password">
         </div>
-        <div class="valid ta-c">
-            <input class="valid-input d-ib ta-c" type="text" placeholder="valid code">
-            <button class="valid-btn d-ib ta-c">send</button>
+        <div class="valid ta-c p-r">
+            <input name='code' validator ='required' class="valid-input d-ib ta-c" ng-model='user.code' type="text" placeholder="valid code">
+            <button class="valid-btn d-ib ta-c" ng-class="{disabled:time}" ng-click="time?1==1:sendCode()" ng-bind="time?time:'send'">send</button>
         </div>
-        <button class="login-btn">login</button>
-        <button class="register-btn">register</button>
+        <button class="login-btn" ui-sref='login'>login</button>
+        <button class="register-btn" validation-submit='form' ng-click='submit()'>register</button>
     </form>
 </div>
