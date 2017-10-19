@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-    .controller('registerCtrl', ['$scope', '$http', '$interval','$state', function($scope, $http, $interval,$state) {
+    .controller('registerCtrl', ['$scope', '$http', '$interval','$state','cache', function($scope, $http, $interval,$state,cache) {
         $scope.submit = function() {
             $http.post('/data/regist.json',$scope.user)
             	.success(function(res){

@@ -1,6 +1,9 @@
 'use strict';
 
 angular.module('app')
-    .controller('favoriteCtrl', ['$scope', function($scope) {
-
+    .controller('favoriteCtrl', ['$scope','$http', function($scope,$http) {
+    	$http.get('/data/myFavorite.json')
+    		.then(function(res){
+    			$scope.list=res.data;
+    		})
     }]);

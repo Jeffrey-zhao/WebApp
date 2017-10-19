@@ -1,10 +1,15 @@
 <div class="me ta-c">
-    <img class="d-b" src="image/head.png" alt="">
-    <div class="name">Mr. Zhao</div>
-    <div class="btns">
-        <button ui-sref="post">post</button>
-        <button ui-sref="favorite">favorite</button>
-        <button class="logout">exit</button>
+    <div ng-show="name">
+        <img class="d-b" ng-src="{{image}}" alt="">
+        <div class="name" ng-bind="name">Mr. Zhao</div>
+        <div class="btns">
+            <button ui-sref="post">post</button>
+            <button ui-sref="favorite">favorite</button>
+            <button class="logout" ng-click="logout()">exit</button>
+        </div>
+    </div>
+    <div ng-hide="name">
+    	<button class="btn-login" ui-sref="login">go to login</button>
     </div>
 </div>
 <div app-foot></div>
